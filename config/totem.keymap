@@ -24,42 +24,42 @@
         base_layer {
             label = "BASE";
             bindings = <
-//             Q         W         E         R         T             P         O         I         U         Y
-               &kp Q     &kp W     &kp E     &kp R     &kp T           &kp P     &kp O     &kp I     &kp U     &kp Y
-//             A         S         D         F         G             SEMI      L         K         J         H
-               &kp A     &kp S     &kp D     &kp F     &kp G           &kp SEMI  &kp L     &kp K     &kp J     &kp H
-//             Z         X         C         V         B             SLASH     DOT       COMMA     M         N
-    &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B           &kp FSLH  &kp DOT   &kp COMMA &kp M     &kp N     &kp RSHFT
-//                                 BSPC      DEL       MO(1)         SPACE     ENTER     LGUI
-                                   &kp BSPC  &kp DEL   &mo NUM         &kp SPACE &kp RET   &kp LGUI
+//             Q         W         E         R         T             Y         U         I         O         P
+               &kp Q     &kp W     &kp E     &kp R     &kp T           &kp Y     &kp U     &kp I     &kp O     &kp P
+//             A         S         D         F         G             H         J         K         L         SEMI
+               &kp A     &kp S     &kp D     &kp F     &kp G           &kp H     &kp J     &kp K     &kp L     &kp SEMI
+//             Z         X         C         V         B             N         M         COMMA     DOT       SLASH
+    &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B           &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+//                                 BSPC      DEL       MO(1)         LGUI      ENTER     SPACE
+                                   &kp BSPC  &kp DEL   &mo NUM         &kp LGUI  &kp RET   &kp SPACE
             >;
         };
 
         num_layer {
             label = "NUM";
             bindings = <
-//             1         2         3         4         5             0         9         8         7         6
-               &kp N1    &kp N2    &kp N3    &kp N4    &kp N5          &kp N0    &kp N9    &kp N8    &kp N7    &kp N6
-//             A         S         D         F         G             GRAVE     RIGHT     UP        DOWN      LEFT
-               &kp A     &kp S     &kp D     &kp F     &kp G           &kp GRAVE &kp RIGHT &kp UP    &kp DOWN  &kp LEFT
-//             Z         X         C         V         B             SQT       RBKT      LBKT      BSLH      MINUS
-    &kp TAB    &kp Z     &kp X     &kp C     &kp V     &kp B           &kp SQT   &kp RBKT  &kp LBKT  &kp BSLH  &kp MINUS &kp EQUAL
-//                                 MO(2)     LALT      SPACE         RCTRL     RALT      ESC
-                                   &mo NAV   &kp LALT  &kp SPACE       &kp RCTRL &kp RALT  &kp ESC
+//             1         2         3         4         5             6         7         8         9         0
+               &kp N1    &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+//             A         S         D         F         G             LEFT      DOWN      UP        RIGHT     GRAVE
+               &kp A     &kp S     &kp D     &kp F     &kp G           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp GRAVE
+//             Z         X         C         V         B             MINUS     BSLH      LBKT      RBKT      SQT
+    &kp TAB    &kp Z     &kp X     &kp C     &kp V     &kp B           &kp MINUS &kp BSLH  &kp LBKT  &kp RBKT  &kp SQT   &kp EQUAL
+//                                 MO(2)     LALT      SPACE         ESC       RALT      RCTRL
+                                   &mo NAV   &kp LALT  &kp SPACE       &kp ESC   &kp RALT  &kp RCTRL
             >;
         };
 
         nav_layer {
             label = "NAV";
             bindings = <
-//             CAPS      NUM       UP        EQUAL     LBRC          KP_PLUS   F9        F8        KP_7      RBRC
-               &kp CAPS  &kp KP_NUM &kp UP   &kp EQUAL &kp LS(LBKT)  &kp KP_PLUS &kp F9  &kp F8    &kp KP_N7 &kp LS(RBKT)
-//             SQT       LEFT      DOWN      RIGHT     LBKT          MINUS     MS_R      MS_U      MS_D      MS_L
-               &kp SQT   &kp LEFT  &kp DOWN  &kp RIGHT &kp LBKT        &kp MINUS &none   &none     &none     &none
-//             END       PG_UP     CTRL-S    PG_DN     LPAR          ASTRK     KP_3      KP_2      KP_1      RPAR
-    &kp LCTRL  &kp END   &kp PG_UP &kp LC(S) &kp PG_DN &kp LS(N9)      &kp KP_MULTIPLY &kp KP_N3 &kp KP_N2 &kp KP_N1 &kp LS(N0) &tog NAV
-//                                 trans     trans     trans         BTN2      BTN1      trans
-                                   &trans    &trans    &trans          &none   &none     &trans
+//             CAPS      NUM       UP        EQUAL     LBRC          RBRC      KP_7      F8        F9        KP_PLUS
+               &kp CAPS  &kp KP_NUM &kp UP   &kp EQUAL &kp LS(LBKT)  &kp LS(RBKT) &kp KP_N7 &kp F8  &kp F9    &kp KP_PLUS
+//             SQT       LEFT      DOWN      RIGHT     LBKT          RBKT      NONE      NONE      NONE      MINUS
+               &kp SQT   &kp LEFT  &kp DOWN  &kp RIGHT &kp LBKT        &kp RBKT  &none     &none     &none     &kp MINUS
+//             END       PG_UP     CTRL-S    PG_DN     LPAR          RPAR      KP_1      KP_2      KP_3      ASTRK
+    &kp LCTRL  &kp END   &kp PG_UP &kp LC(S) &kp PG_DN &kp LS(N9)      &kp LS(N0) &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY &tog NAV
+//                                 trans     trans     trans         trans     NONE      NONE
+                                   &trans    &trans    &trans          &trans    &none     &none
             >;
         };
     };
