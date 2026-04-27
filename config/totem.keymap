@@ -18,6 +18,8 @@
 #define NUM  1
 #define NAV  2
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2400
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -69,4 +71,5 @@
 &mmv {
     time-to-max-speed-ms = <20>;
     acceleration-exponent = <3>;
+    trigger-period-ms = <8>;
 };
