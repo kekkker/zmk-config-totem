@@ -19,17 +19,6 @@
 #define NAV  2
 
 / {
-    behaviors {
-        /omit-if-no-ref/ mmv: mouse_move {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <1>;
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <60>;
-            acceleration-exponent = <2>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -75,4 +64,9 @@
             >;
         };
     };
+};
+
+&mmv {
+    time-to-max-speed-ms = <60>;
+    acceleration-exponent = <2>;
 };
