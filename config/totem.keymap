@@ -18,7 +18,7 @@
 #define NUM  1
 #define NAV  2
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2400
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 
 / {
     keymap {
